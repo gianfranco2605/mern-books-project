@@ -8,9 +8,9 @@ const app = express();
 //Middleware for parsing request body
 app.use(express.json());
 
-app.get('/', (req, res) => {
-    console.log(req);
-    return res.status(234).send("Welcome");
+app.get('/', (request, response) => {
+    console.log(request);
+    return response.status(234).send("Welcome");
 })
 
 //Route to Save a new Book
